@@ -28,8 +28,6 @@ class MapViewAdapter: NSObject {
 	private var didFinishLoading = false
 	private let mapView: MKMapView
 
-	var planeLayer = CALayer()
-
 	// MARK: - Construction
 
 	init(mapView: MKMapView) {
@@ -68,15 +66,10 @@ extension MapViewAdapter: MapViewAdapterProtocol {
 
 extension MapViewAdapter: MKMapViewDelegate {
 	func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-		guard let polyline = overlay as? MKPolyline else { return MKOverlayRenderer() }
-		let renderer = MKPolylineRenderer(polyline: polyline)
-		renderer.lineWidth = 2.0
-		renderer.alpha = 0.5
-		renderer.lineCap = .round
-		renderer.strokeColor = .systemBlue
-		renderer.lineDashPattern = [2, 3];
-		renderer.lineJoin = .round
-		return renderer
+		if let lineOverlay = overlay as? MKGeodesicPolyline {
+			return GeodesicLineRenderer(overlay: lineOverlay)
+		}
+		return MKOverlayRenderer(overlay: overlay)
 	}
 
 	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

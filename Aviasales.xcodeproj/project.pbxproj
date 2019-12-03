@@ -27,6 +27,7 @@
 		7586E26023955E9F00AC02C5 /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586E25F23955E9E00AC02C5 /* MockNetworkClient.swift */; };
 		759FF03D239038F700A03FA2 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FF03C239038F700A03FA2 /* PlaceAnnotationView.swift */; };
 		759FF04123903FF700A03FA2 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */; };
+		75CF734823966D8500647714 /* GeodesicLineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF734723966D8500647714 /* GeodesicLineRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		7586E25F23955E9E00AC02C5 /* MockNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
 		759FF03C239038F700A03FA2 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
+		75CF734723966D8500647714 /* GeodesicLineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeodesicLineRenderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				7525DFD2238D187A00CC6FA5 /* MapViewController.swift */,
 				7542783E2392D347000BC25A /* MapViewAdapter.swift */,
 				759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */,
+				75CF734723966D8500647714 /* GeodesicLineRenderer.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				755CEFF123907A1F00EB0E0E /* PlaceAnnotation.swift in Sources */,
 				7586E25E23955AD700AC02C5 /* NetworkClient.swift in Sources */,
 				7525DFD9238D5D7200CC6FA5 /* PlaceTableViewCell.swift in Sources */,
+				75CF734823966D8500647714 /* GeodesicLineRenderer.swift in Sources */,
 				7542783F2392D347000BC25A /* MapViewAdapter.swift in Sources */,
 				7525DFDD238D6D7300CC6FA5 /* PlainPlace.swift in Sources */,
 				757B98FD239584CA00ADA019 /* MapViewPresenter.swift in Sources */,
