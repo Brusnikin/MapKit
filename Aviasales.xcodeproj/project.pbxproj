@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		751EEAE9238C4C1900FC99B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */; };
-		751EEAEB238C4C1900FC99B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAEA238C4C1900FC99B8 /* SceneDelegate.swift */; };
-		751EEAED238C4C1900FC99B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAEC238C4C1900FC99B8 /* ViewController.swift */; };
-		751EEAF0238C4C1900FC99B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EEAEE238C4C1900FC99B8 /* Main.storyboard */; };
+		751EEAED238C4C1900FC99B8 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAEC238C4C1900FC99B8 /* PlaceViewController.swift */; };
 		751EEAF2238C4C1C00FC99B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751EEAF1238C4C1C00FC99B8 /* Assets.xcassets */; };
 		751EEAF5238C4C1C00FC99B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751EEAF3238C4C1C00FC99B8 /* LaunchScreen.storyboard */; };
 		751EEB00238C4C1C00FC99B8 /* AviasalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAFF238C4C1C00FC99B8 /* AviasalesTests.swift */; };
+		7525DFD3238D187A00CC6FA5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD2238D187A00CC6FA5 /* MapViewController.swift */; };
+		7525DFD5238D199100CC6FA5 /* PlaceTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD4238D199100CC6FA5 /* PlaceTableAdapter.swift */; };
+		7525DFD7238D5B2E00CC6FA5 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */; };
+		7525DFD9238D5D7200CC6FA5 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD8238D5D7200CC6FA5 /* PlaceTableViewCell.swift */; };
+		7525DFDB238D5DE900CC6FA5 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFDA238D5DE900CC6FA5 /* Configurable.swift */; };
+		7525DFDD238D6D7300CC6FA5 /* PlainPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFDC238D6D7300CC6FA5 /* PlainPlace.swift */; };
+		7542783F2392D347000BC25A /* MapViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542783E2392D347000BC25A /* MapViewAdapter.swift */; };
+		755CEFF123907A1F00EB0E0E /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CEFF023907A1F00EB0E0E /* PlaceAnnotation.swift */; };
+		757B98FD239584CA00ADA019 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B98FC239584CA00ADA019 /* MapViewPresenter.swift */; };
+		757B98FF2395911E00ADA019 /* PlaceViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B98FE2395911E00ADA019 /* PlaceViewPresenter.swift */; };
+		7586E25B239550D100AC02C5 /* MockPlaceServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586E25A239550D100AC02C5 /* MockPlaceServiceDelegate.swift */; };
+		7586E25E23955AD700AC02C5 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586E25D23955AD700AC02C5 /* NetworkClient.swift */; };
+		7586E26023955E9F00AC02C5 /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586E25F23955E9E00AC02C5 /* MockNetworkClient.swift */; };
+		759FF03D239038F700A03FA2 /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FF03C239038F700A03FA2 /* PlaceAnnotationView.swift */; };
+		759FF04123903FF700A03FA2 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +42,28 @@
 /* Begin PBXFileReference section */
 		751EEAE5238C4C1900FC99B8 /* Aviasales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviasales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		751EEAEA238C4C1900FC99B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		751EEAEC238C4C1900FC99B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		751EEAEF238C4C1900FC99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		751EEAEC238C4C1900FC99B8 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		751EEAF1238C4C1C00FC99B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		751EEAF4238C4C1C00FC99B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		751EEAF6238C4C1C00FC99B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		751EEAFB238C4C1C00FC99B8 /* AviasalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AviasalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EEAFF238C4C1C00FC99B8 /* AviasalesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AviasalesTests.swift; sourceTree = "<group>"; };
 		751EEB01238C4C1C00FC99B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7525DFD2238D187A00CC6FA5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7525DFD4238D199100CC6FA5 /* PlaceTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableAdapter.swift; sourceTree = "<group>"; };
+		7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		7525DFD8238D5D7200CC6FA5 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		7525DFDA238D5DE900CC6FA5 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		7525DFDC238D6D7300CC6FA5 /* PlainPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainPlace.swift; sourceTree = "<group>"; };
+		7542783E2392D347000BC25A /* MapViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewAdapter.swift; sourceTree = "<group>"; };
+		755CEFF023907A1F00EB0E0E /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		757B98FC239584CA00ADA019 /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		757B98FE2395911E00ADA019 /* PlaceViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewPresenter.swift; sourceTree = "<group>"; };
+		7586E25A239550D100AC02C5 /* MockPlaceServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPlaceServiceDelegate.swift; sourceTree = "<group>"; };
+		7586E25D23955AD700AC02C5 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		7586E25F23955E9E00AC02C5 /* MockNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		759FF03C239038F700A03FA2 /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +105,14 @@
 		751EEAE7238C4C1900FC99B8 /* Aviasales */ = {
 			isa = PBXGroup;
 			children = (
-				751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */,
-				751EEAEA238C4C1900FC99B8 /* SceneDelegate.swift */,
-				751EEAEC238C4C1900FC99B8 /* ViewController.swift */,
-				751EEAEE238C4C1900FC99B8 /* Main.storyboard */,
-				751EEAF1238C4C1C00FC99B8 /* Assets.xcassets */,
+				7584BE1823953D7600A3148C /* ApplicationLayer */,
+				7584BE1323953CDC00A3148C /* PresentationLayer */,
+				7584BE1623953D2F00A3148C /* BusinessLogicLayer */,
+				7586E25C23955AB400AC02C5 /* CoreLayer */,
+				7584BE1723953D6000A3148C /* Extension */,
 				751EEAF3238C4C1C00FC99B8 /* LaunchScreen.storyboard */,
 				751EEAF6238C4C1C00FC99B8 /* Info.plist */,
+				751EEAF1238C4C1C00FC99B8 /* Assets.xcassets */,
 			);
 			path = Aviasales;
 			sourceTree = "<group>";
@@ -94,9 +121,77 @@
 			isa = PBXGroup;
 			children = (
 				751EEAFF238C4C1C00FC99B8 /* AviasalesTests.swift */,
+				7586E25A239550D100AC02C5 /* MockPlaceServiceDelegate.swift */,
+				7586E25F23955E9E00AC02C5 /* MockNetworkClient.swift */,
 				751EEB01238C4C1C00FC99B8 /* Info.plist */,
 			);
 			path = AviasalesTests;
+			sourceTree = "<group>";
+		};
+		7584BE1323953CDC00A3148C /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7584BE1423953CEC00A3148C /* PlaceView */,
+				7584BE1523953D1900A3148C /* MapView */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		7584BE1423953CEC00A3148C /* PlaceView */ = {
+			isa = PBXGroup;
+			children = (
+				757B98FE2395911E00ADA019 /* PlaceViewPresenter.swift */,
+				751EEAEC238C4C1900FC99B8 /* PlaceViewController.swift */,
+				7525DFD4238D199100CC6FA5 /* PlaceTableAdapter.swift */,
+				759FF03C239038F700A03FA2 /* PlaceAnnotationView.swift */,
+				755CEFF023907A1F00EB0E0E /* PlaceAnnotation.swift */,
+				7525DFD8238D5D7200CC6FA5 /* PlaceTableViewCell.swift */,
+				7525DFDC238D6D7300CC6FA5 /* PlainPlace.swift */,
+			);
+			path = PlaceView;
+			sourceTree = "<group>";
+		};
+		7584BE1523953D1900A3148C /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				757B98FC239584CA00ADA019 /* MapViewPresenter.swift */,
+				7525DFD2238D187A00CC6FA5 /* MapViewController.swift */,
+				7542783E2392D347000BC25A /* MapViewAdapter.swift */,
+				759FF04023903FF700A03FA2 /* PlaneAnnotationView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		7584BE1623953D2F00A3148C /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		7584BE1723953D6000A3148C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7525DFDA238D5DE900CC6FA5 /* Configurable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7584BE1823953D7600A3148C /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		7586E25C23955AB400AC02C5 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7586E25D23955AD700AC02C5 /* NetworkClient.swift */,
+			);
+			path = CoreLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +277,6 @@
 			files = (
 				751EEAF5238C4C1C00FC99B8 /* LaunchScreen.storyboard in Resources */,
 				751EEAF2238C4C1C00FC99B8 /* Assets.xcassets in Resources */,
-				751EEAF0238C4C1900FC99B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +294,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751EEAED238C4C1900FC99B8 /* ViewController.swift in Sources */,
+				757B98FF2395911E00ADA019 /* PlaceViewPresenter.swift in Sources */,
+				751EEAED238C4C1900FC99B8 /* PlaceViewController.swift in Sources */,
+				7525DFDB238D5DE900CC6FA5 /* Configurable.swift in Sources */,
+				759FF03D239038F700A03FA2 /* PlaceAnnotationView.swift in Sources */,
+				755CEFF123907A1F00EB0E0E /* PlaceAnnotation.swift in Sources */,
+				7586E25E23955AD700AC02C5 /* NetworkClient.swift in Sources */,
+				7525DFD9238D5D7200CC6FA5 /* PlaceTableViewCell.swift in Sources */,
+				7542783F2392D347000BC25A /* MapViewAdapter.swift in Sources */,
+				7525DFDD238D6D7300CC6FA5 /* PlainPlace.swift in Sources */,
+				757B98FD239584CA00ADA019 /* MapViewPresenter.swift in Sources */,
 				751EEAE9238C4C1900FC99B8 /* AppDelegate.swift in Sources */,
-				751EEAEB238C4C1900FC99B8 /* SceneDelegate.swift in Sources */,
+				759FF04123903FF700A03FA2 /* PlaneAnnotationView.swift in Sources */,
+				7525DFD7238D5B2E00CC6FA5 /* PlaceService.swift in Sources */,
+				7525DFD5238D199100CC6FA5 /* PlaceTableAdapter.swift in Sources */,
+				7525DFD3238D187A00CC6FA5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7586E25B239550D100AC02C5 /* MockPlaceServiceDelegate.swift in Sources */,
+				7586E26023955E9F00AC02C5 /* MockNetworkClient.swift in Sources */,
 				751EEB00238C4C1C00FC99B8 /* AviasalesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		751EEAEE238C4C1900FC99B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				751EEAEF238C4C1900FC99B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		751EEAF3238C4C1C00FC99B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -248,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -294,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -308,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -348,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -365,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4878CH2H6;
 				INFOPLIST_FILE = Aviasales/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4878CH2H6;
 				INFOPLIST_FILE = Aviasales/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +506,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4878CH2H6;
 				INFOPLIST_FILE = AviasalesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,7 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q4878CH2H6;
 				INFOPLIST_FILE = AviasalesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

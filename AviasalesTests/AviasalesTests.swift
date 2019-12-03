@@ -10,25 +10,49 @@ import XCTest
 @testable import Aviasales
 
 class AviasalesTests: XCTestCase {
+    func testPlaceService() {
+		let places = generatedPaces()
+		let networkClient = MockNetworkClient()
+		networkClient.add(places: places)
+		let delegate = MockPlaceServiceDelegate()
+		let service = PlaceService(networkClient: networkClient)
+		service.delegate = delegate
+		service.requestPlaces(by: "SVO")
+		service.requestPlaces(by: "LED")
+		
+		XCTAssertFalse(places.isEmpty)
+		XCTAssertNotNil(delegate.places)
+		XCTAssertFalse(delegate.places?.isEmpty ?? true)
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+		XCTAssertEqual(places[0].iataCode, delegate.places?[0].iataCode)
+		XCTAssertEqual(places[0].location.latitude, delegate.places?[0].location.latitude)
+		XCTAssertEqual(places[0].location.longitude, delegate.places?[0].location.longitude)
+
+		XCTAssertEqual(places[1].iataCode, delegate.places?[1].iataCode)
+		XCTAssertEqual(places[1].location.latitude, delegate.places?[1].location.latitude)
+		XCTAssertEqual(places[1].location.longitude, delegate.places?[1].location.longitude)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+	func testEmptyQuery() {
+		let networkClient = MockNetworkClient()
+		networkClient.add(places: [])
+		let delegate = MockPlaceServiceDelegate()
+		let service = PlaceService(networkClient: networkClient)
+		service.delegate = delegate
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+		service.requestPlaces(by: "")
+		XCTAssertNil(delegate.places)
+	}
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+	private func generatedPaces() -> [PlainPlace] {
+		let location = PlainLocation(latitude: 50, longitude: 30)
+		return [PlainPlace(location: location,
+						   name: "test",
+						   airportName: "test",
+						   iataCode: "SVO"),
+				PlainPlace(location: location,
+						   name: "test",
+						   airportName: nil,
+						   iataCode: "LED")]
+	}
 }
