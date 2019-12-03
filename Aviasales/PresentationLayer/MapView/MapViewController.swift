@@ -58,10 +58,6 @@ class MapViewController: UIViewController {
 		displayLink?.invalidate()
 	}
 
-	deinit {
-		print("MapViewController is dead")
-	}
-
 	// MARK: - Functions
 
 	private func showPlaneAnimation() {

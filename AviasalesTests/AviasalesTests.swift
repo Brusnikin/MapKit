@@ -11,26 +11,25 @@ import XCTest
 
 class AviasalesTests: XCTestCase {
     func testPlaceService() {
-		let places = generatedPaces()
+		let location = PlainLocation(latitude: 50, longitude: 30)
+		let departure = PlainPlace(location: location, name: "test", airportName: "test", iataCode: "SVO")
+		let destination = PlainPlace(location: location, name: "test", airportName: "test", iataCode: "LED")
+
 		let networkClient = MockNetworkClient()
-		networkClient.add(places: places)
+		networkClient.add(places: [departure, destination])
 		let delegate = MockPlaceServiceDelegate()
 		let service = PlaceService(networkClient: networkClient)
 		service.delegate = delegate
 		service.requestPlaces(by: "SVO")
 		service.requestPlaces(by: "LED")
-		
-		XCTAssertFalse(places.isEmpty)
-		XCTAssertNotNil(delegate.places)
-		XCTAssertFalse(delegate.places?.isEmpty ?? true)
 
-		XCTAssertEqual(places[0].iataCode, delegate.places?[0].iataCode)
-		XCTAssertEqual(places[0].location.latitude, delegate.places?[0].location.latitude)
-		XCTAssertEqual(places[0].location.longitude, delegate.places?[0].location.longitude)
+		XCTAssertEqual(departure.iataCode, delegate.places?[0].iataCode)
+		XCTAssertEqual(departure.location.latitude, delegate.places?[0].location.latitude)
+		XCTAssertEqual(departure.location.longitude, delegate.places?[0].location.longitude)
 
-		XCTAssertEqual(places[1].iataCode, delegate.places?[1].iataCode)
-		XCTAssertEqual(places[1].location.latitude, delegate.places?[1].location.latitude)
-		XCTAssertEqual(places[1].location.longitude, delegate.places?[1].location.longitude)
+		XCTAssertEqual(destination.iataCode, delegate.places?[1].iataCode)
+		XCTAssertEqual(destination.location.latitude, delegate.places?[1].location.latitude)
+		XCTAssertEqual(destination.location.longitude, delegate.places?[1].location.longitude)
     }
 
 	func testEmptyQuery() {
@@ -42,17 +41,5 @@ class AviasalesTests: XCTestCase {
 
 		service.requestPlaces(by: "")
 		XCTAssertNil(delegate.places)
-	}
-
-	private func generatedPaces() -> [PlainPlace] {
-		let location = PlainLocation(latitude: 50, longitude: 30)
-		return [PlainPlace(location: location,
-						   name: "test",
-						   airportName: "test",
-						   iataCode: "SVO"),
-				PlainPlace(location: location,
-						   name: "test",
-						   airportName: nil,
-						   iataCode: "LED")]
 	}
 }

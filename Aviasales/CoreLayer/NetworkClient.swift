@@ -15,7 +15,7 @@ protocol NetworkClientProtocol {
 	func request(by query: String, onSuccess: @escaping Success, onFailure: @escaping Failure)
 }
 
-class NetworkClient: NSObject {
+class NetworkClient {
 
 	// MARK: - Properties
 
@@ -39,12 +39,6 @@ class NetworkClient: NSObject {
 		urlComponents.queryItems = [termQuery, localeQuery]
 		guard let url = urlComponents.url else { fatalError("URL could not be configured.") }
 		return URLRequest(url: url)
-	}
-}
-
-extension NetworkClient: URLSessionTaskDelegate {
-	func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-		print(task.state)
 	}
 }
 

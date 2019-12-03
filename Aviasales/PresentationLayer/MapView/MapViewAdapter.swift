@@ -95,8 +95,6 @@ extension MapViewAdapter: MKMapViewDelegate {
 	func mapViewDidFinishRenderingMap(_ mapView: MKMapView, fullyRendered: Bool) {
 		if fullyRendered, !didFinishRendering {
 			didFinishRendering = true
-
-			print("mapViewDidFinishRenderingMap")
 			self.delegate?.mapViewDidFinishRenderingMap()
 		}
 	}
@@ -104,8 +102,6 @@ extension MapViewAdapter: MKMapViewDelegate {
 	func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
 		if !didFinishLoading {
 			didFinishLoading = true
-
-			print("mapViewDidFinishLoadingMap")
 			self.delegate?.mapViewDidFinishLoadingMap()
 		}
 	}
