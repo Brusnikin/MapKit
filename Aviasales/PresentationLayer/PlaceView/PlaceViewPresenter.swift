@@ -17,18 +17,25 @@ protocol PlaceViewPresenterDelegate: class {
 	func update(places: [PlainPlace])
 }
 
-class PlaceViewPresenter {
+class PlaceViewPresenter: NSObject {
 
 	// MARK: - Properties
 
 	weak var delegate: PlaceViewPresenterDelegate?
 
 	private let placeService: PlaceServiceProtocol
+	private let selector = #selector(performWithDelay(by:))
 
 	// MARK: - Construction
 
 	init(placeService: PlaceServiceProtocol) {
 		self.placeService = placeService
+	}
+
+	// MARK: - Functions
+
+	@objc private func performWithDelay(by query: String) {
+		placeService.requestPlaces(by: query)
 	}
 }
 
@@ -42,7 +49,8 @@ extension PlaceViewPresenter: PlaceViewPresenterProtocol {
 	}
 
 	func places(by query: String) {
-		placeService.requestPlaces(by: query)
+		NSObject.cancelPreviousPerformRequests(withTarget: self, selector: selector, object: query)
+		perform(selector, with: query, afterDelay: 0.1)
 	}
 }
 
