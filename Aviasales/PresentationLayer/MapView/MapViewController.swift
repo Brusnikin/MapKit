@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 protocol MapViewControllerProtocol {
-	func display(places: [PlainPlace])
+	func display(place departure: PlainPlace, destination: PlainPlace)
 }
 
 class MapViewController: UIViewController {
@@ -97,8 +97,8 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: MapViewControllerProtocol {
-	func display(places: [PlainPlace]) {
-		self.places = places
+	func display(place departure: PlainPlace, destination: PlainPlace) {
+		self.places = [departure, destination]
 	}
 
 	func addAnnotations() {
@@ -116,10 +116,7 @@ extension MapViewController: MapViewControllerProtocol {
 
 extension MapViewController: MapViewAdapterDelegate {
 	func mapViewDidFinishRenderingMap() {
-		showPlaneAnimation()
-	}
-
-	func mapViewDidFinishLoadingMap() {
 		addAnnotations()
+		showPlaneAnimation()
 	}
 }

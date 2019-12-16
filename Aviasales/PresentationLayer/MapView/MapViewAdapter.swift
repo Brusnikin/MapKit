@@ -15,7 +15,6 @@ protocol MapViewAdapterProtocol: class {
 
 protocol MapViewAdapterDelegate: class {
 	func mapViewDidFinishRenderingMap()
-	func mapViewDidFinishLoadingMap()
 }
 
 class MapViewAdapter: NSObject {
@@ -25,7 +24,6 @@ class MapViewAdapter: NSObject {
 	weak var delegate: MapViewAdapterDelegate?
 
 	private var didFinishRendering = false
-	private var didFinishLoading = false
 	private let mapView: MKMapView
 
 	// MARK: - Construction
@@ -96,13 +94,6 @@ extension MapViewAdapter: MKMapViewDelegate {
 		if fullyRendered, !didFinishRendering {
 			didFinishRendering = true
 			self.delegate?.mapViewDidFinishRenderingMap()
-		}
-	}
-
-	func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
-		if !didFinishLoading {
-			didFinishLoading = true
-			self.delegate?.mapViewDidFinishLoadingMap()
 		}
 	}
 }

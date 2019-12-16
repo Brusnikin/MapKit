@@ -97,7 +97,7 @@ extension PlaceViewController: PlaceTableAdapterDelegate {
 		let presenter = MapViewPresenter()
 		let mapViewController = MapViewController(presenter: presenter)
 		mapViewController.title = "\(departure.iataCode)-\(destination.iataCode)"
-		mapViewController.display(places: [departure, destination])
+		mapViewController.display(place: departure, destination: destination)
 		navigationController?.pushViewController(mapViewController, animated: true)
 	}
 }
