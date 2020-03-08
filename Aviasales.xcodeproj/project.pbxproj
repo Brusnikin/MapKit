@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676BD7D8241545E7002497B8 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676BD7D7241545E7002497B8 /* PlaceService.swift */; };
 		751EEAE9238C4C1900FC99B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */; };
 		751EEAED238C4C1900FC99B8 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAEC238C4C1900FC99B8 /* PlaceViewController.swift */; };
 		751EEAF2238C4C1C00FC99B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751EEAF1238C4C1C00FC99B8 /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		751EEB00238C4C1C00FC99B8 /* AviasalesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751EEAFF238C4C1C00FC99B8 /* AviasalesTests.swift */; };
 		7525DFD3238D187A00CC6FA5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD2238D187A00CC6FA5 /* MapViewController.swift */; };
 		7525DFD5238D199100CC6FA5 /* PlaceTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD4238D199100CC6FA5 /* PlaceTableAdapter.swift */; };
-		7525DFD7238D5B2E00CC6FA5 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */; };
 		7525DFD9238D5D7200CC6FA5 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFD8238D5D7200CC6FA5 /* PlaceTableViewCell.swift */; };
 		7525DFDB238D5DE900CC6FA5 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFDA238D5DE900CC6FA5 /* Configurable.swift */; };
 		7525DFDD238D6D7300CC6FA5 /* PlainPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7525DFDC238D6D7300CC6FA5 /* PlainPlace.swift */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		676BD7D7241545E7002497B8 /* PlaceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		751EEAE5238C4C1900FC99B8 /* Aviasales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviasales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		751EEAE8238C4C1900FC99B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		751EEAEC238C4C1900FC99B8 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		751EEB01238C4C1C00FC99B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7525DFD2238D187A00CC6FA5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7525DFD4238D199100CC6FA5 /* PlaceTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableAdapter.swift; sourceTree = "<group>"; };
-		7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		7525DFD8238D5D7200CC6FA5 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		7525DFDA238D5DE900CC6FA5 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		7525DFDC238D6D7300CC6FA5 /* PlainPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainPlace.swift; sourceTree = "<group>"; };
@@ -86,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		676BD7D6241545E7002497B8 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				676BD7D7241545E7002497B8 /* PlaceService.swift */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
 		751EEADC238C4C1900FC99B8 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +117,7 @@
 			children = (
 				7584BE1823953D7600A3148C /* ApplicationLayer */,
 				7584BE1323953CDC00A3148C /* PresentationLayer */,
-				7584BE1623953D2F00A3148C /* BusinessLogicLayer */,
+				676BD7D6241545E7002497B8 /* BusinessLogicLayer */,
 				7586E25C23955AB400AC02C5 /* CoreLayer */,
 				7584BE1723953D6000A3148C /* Extension */,
 				751EEAF3238C4C1C00FC99B8 /* LaunchScreen.storyboard */,
@@ -163,14 +171,6 @@
 				75CF734723966D8500647714 /* GeodesicLineRenderer.swift */,
 			);
 			path = MapView;
-			sourceTree = "<group>";
-		};
-		7584BE1623953D2F00A3148C /* BusinessLogicLayer */ = {
-			isa = PBXGroup;
-			children = (
-				7525DFD6238D5B2E00CC6FA5 /* PlaceService.swift */,
-			);
-			path = BusinessLogicLayer;
 			sourceTree = "<group>";
 		};
 		7584BE1723953D6000A3148C /* Extension */ = {
@@ -300,6 +300,7 @@
 				757B98FF2395911E00ADA019 /* PlaceViewPresenter.swift in Sources */,
 				751EEAED238C4C1900FC99B8 /* PlaceViewController.swift in Sources */,
 				7525DFDB238D5DE900CC6FA5 /* Configurable.swift in Sources */,
+				676BD7D8241545E7002497B8 /* PlaceService.swift in Sources */,
 				759FF03D239038F700A03FA2 /* PlaceAnnotationView.swift in Sources */,
 				755CEFF123907A1F00EB0E0E /* PlaceAnnotation.swift in Sources */,
 				7586E25E23955AD700AC02C5 /* NetworkClient.swift in Sources */,
@@ -310,7 +311,6 @@
 				757B98FD239584CA00ADA019 /* MapViewPresenter.swift in Sources */,
 				751EEAE9238C4C1900FC99B8 /* AppDelegate.swift in Sources */,
 				759FF04123903FF700A03FA2 /* PlaneAnnotationView.swift in Sources */,
-				7525DFD7238D5B2E00CC6FA5 /* PlaceService.swift in Sources */,
 				7525DFD5238D199100CC6FA5 /* PlaceTableAdapter.swift in Sources */,
 				7525DFD3238D187A00CC6FA5 /* MapViewController.swift in Sources */,
 			);
